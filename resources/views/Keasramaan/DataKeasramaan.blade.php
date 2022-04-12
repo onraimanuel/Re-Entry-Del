@@ -1,8 +1,9 @@
-@extends('Header.HeaderMahasiswa')
+@extends('Header.HeaderKeasramaan')
 
-@section('title', 'Data Diri - Mahasiswa')
+@section('title','Data Diri - Keasramaan')
 
 @section('container')
+<!-- MAIN -->
 
 <main id="main" class="main">
 
@@ -10,7 +11,7 @@
       <h1>Data Diri</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{url('/IndexMahasiswa')}}">Beranda</a></li>
+          <li class="breadcrumb-item"><a href="{{url('/IndexKeasramaan')}}">Beranda</a></li>
           <li class="breadcrumb-item active">Data Diri Mahasiswa</li>
         </ol>
       </nav>
@@ -24,8 +25,8 @@
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
               <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
-              <h3>Students</h3>
+              <h2>Pdt. Timur Hutagalung</h2>
+              <h3>Keasramaan</h3>
             </div>
           </div>
 
@@ -54,27 +55,17 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Nama Lengkap</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                    <div class="col-lg-9 col-md-8">Pdt. Timur Hutagalung</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Username</div>
-                    <div class="col-lg-9 col-md-8">if420035</div>
+                    <div class="col-lg-9 col-md-8">TimurHutagalung</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email Akademik</div>
-                    <div class="col-lg-9 col-md-8">if420035@students.del.ac.id</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Program Studi</div>
-                    <div class="col-lg-9 col-md-8">	DIV Teknologi Rekayasa Perangkat Lunak</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Kelas</div>
-                    <div class="col-lg-9 col-md-8">42TRPL1</div>
+                    <div class="col-lg-9 col-md-8">TimurHutagalung@gmail.com</div>
                   </div>
                 </div>
 
@@ -96,35 +87,21 @@
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama Lengkap</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        <input name="fullName" type="text" class="form-control" id="fullName" value="Pdt. Timur Hutagalung">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Username</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
+                        <input name="company" type="text" class="form-control" id="company" value="TimurHutagalung">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Email Akademik</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Program Studi</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Kelas</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                        <input name="job" type="text" class="form-control" id="Job" value="TimurHutagalung@gmail.com">
                       </div>
                     </div>
                     <div class="text-center">

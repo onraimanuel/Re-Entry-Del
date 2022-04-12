@@ -1,4 +1,4 @@
-@extends('MahasiswaHeader.Header')
+@extends('Header.HeaderMahasiswa')
 
 @section('title','Ruang Karantina - Mahasiswa')
 

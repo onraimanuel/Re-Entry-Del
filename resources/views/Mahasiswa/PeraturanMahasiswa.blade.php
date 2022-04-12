@@ -1,4 +1,4 @@
-@extends('MahasiswaHeader.Header')
+@extends('Header.HeaderMahasiswa')
 
 @section('title','Peraturan - Mahasiswa')
 
@@ -20,7 +20,9 @@
         <div class="card-body">
             <h5 class="card-title">Peraturan Mahasiswa Selama Karantina</h5>
             <ul>
-                <li> <a href="{{url('assets')}}/Dokumen/Protokol_Re-entry.docx">Protokol Re-entry</a></li>
+                <li> 
+                  
+                  <a href="{{url('assets')}}/DokumenPeraturan/Protokol_Re-entry.pdf" target=" _blank">Protokol Re-entry</a></li>
               </ul>  
         </div>
     </div>

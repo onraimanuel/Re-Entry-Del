@@ -1,4 +1,4 @@
-@extends('MahasiswaHeader.Header')
+@extends('Header.HeaderMahasiswa')
 
 @section('title','Dashboard - Mahasiswa')
 
@@ -26,13 +26,13 @@
           <div class="card shadow mb-4">
                 <div class="card-header py-3">
                 </div>
-                <div class="card-body">
+                <div class="card-body ">
                     <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+                            <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0" >
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Status Permohonan</th>
+                                        <th>Status</th>
                                         <th>Oleh</th>
                                         <th>Keperluan</th>
                                         <th>Asal Daerah</th>
@@ -41,7 +41,7 @@
                                 </thead>
                                     <tr>
                                         <td>1</td>
-                                        <td>Disetujui</td>
+                                        <td><span class="badge bg-success">Approved</span></td>
                                         <td>PDT</td>
                                         <td>Praktikum TA</td>
                                         <td>Medan</td>

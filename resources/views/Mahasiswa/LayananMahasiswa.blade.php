@@ -1,4 +1,4 @@
-@extends('MahasiswaHeader.Header')
+@extends('Header.HeaderMahasiswa')
 
 @section('title', 'Layanan - Mahasiswa')
 
@@ -62,7 +62,7 @@
                         <div class="col-md-12">
                             <div class="col-md-12">
                               <div class="form-floating">
-                                <input type="text" class="form-control" id="notel" placeholder="Nomor Telepon / HP/ WA" name="notel">
+                                <input type="number" class="form-control" id="notel" placeholder="Nomor Telepon / HP/ WA" name="notel">
                                 <label for="notel">Nomor Telepon / HP/ WA</label>
                               </div>
                             </div>

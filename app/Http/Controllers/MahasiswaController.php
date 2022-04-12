@@ -37,4 +37,8 @@ class MahasiswaController extends Controller
     public function Peraturan(){
         return view('Mahasiswa/PeraturanMahasiswa');
     }
+
+    public function Login(){
+        return view('Login/Login');
+    }
 }

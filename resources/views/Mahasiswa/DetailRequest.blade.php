@@ -1,4 +1,4 @@
-@extends('MahasiswaHeader.Header')
+@extends('Header.HeaderMahasiswa')
 
 @section('title', 'Data Diri - Mahasiswa')
 

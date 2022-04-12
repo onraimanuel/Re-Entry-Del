@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\Keasramaan;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,11 @@ Route::get('/PerlengkapanMahasiswa',[MahasiswaController::class, 'Perlengkapan']
 Route::get('/RuangKamarMahasiswa',[MahasiswaController::class, 'Ruang']);
 Route::get('/LayananMahasiswa',[MahasiswaController::class, 'Layanan']);
 Route::get('/PeraturanMahasiswa',[MahasiswaController::class, 'Peraturan']);
+
+Route::get('/Login',[MahasiswaController::class, 'Login']);
+
+Route::get('/IndexKeasramaan',[Keasramaan::class, 'IndexKeasramaan']);
+Route::get('/DataKeasramaan',[Keasramaan::class, 'DataKeasramaan']);
+Route::get('/PerlengkapanKeasramaan',[Keasramaan::class, 'PerlengkapanKeasramaan']);
+Route::get('/PeraturanKeasramaan',[Keasramaan::class, 'PeraturanKeasramaan']);
+Route::get('/RuangKamarKeasramaan',[Keasramaan::class, 'RuangKamarKeasramaan']);
