@@ -40,16 +40,17 @@
                                 <th>Nama Perlengkapan</th>
                                 <th>Gambar</th>
                                 <th>Keterangan</th>
-                                <th>Jumlah</th>
-                            </tr>
-                        </thead>
-                            <tr>
-                                <td>1</td>
-                                <td>Disetujui</td>
-                                <td>PDT</td>
-                                <td>Praktikum TA</td>
-                            </tr>         
-                            </tbody>
+                                <th>Jumlah</th><?php $nomor = 1;?>
+                              </tr>
+                          </thead>
+                          @foreach ($PerlengkapanAspa as $item)
+                          <tr>
+                              <td><?php echo $nomor++;?></td>
+                              <td>{{$item->nama_perlengkapan}}</td>
+                              <td><center><img src="{{url('assets')}}/Perlengkapan/{{$item->gambar}}" alt="" style="width: 200px"></center></td>
+                              <td  style="width: 300px">{{$item->keterangan}}</td>
+                              <td>{{$item->jumlah}}</td>
+                        @endforeach
                       </table>
                 </div>
             </div>
@@ -64,15 +65,19 @@
                                 <th>Gambar</th>
                                 <th>Keterangan</th>
                                 <th>Jumlah</th>
-                            </tr>
+                            </tr><?php $nomor = 1;?>
+                          </tr>
                         </thead>
-                            <tr>
-                                <td>1</td>
-                                <td>Disetujui</td>
-                                <td>PDTOKOKOKOOKwniowjeoijwej</td>
-                                <td>Praktikum TA</td>
-                            </tr>         
-                            </tbody>
+                      
+                        @foreach ($PerlengkapanAspi as $item)
+                        <tr>
+                          <td><?php echo $nomor++;?></td>
+                          <td>{{$item->nama_perlengkapan}}</td>
+                          <td><center><img src="{{url('assets')}}/Perlengkapan/{{$item->gambar}}" alt="" style="width: 200px"></center></td>
+                          <td  style="width: 300px">{{$item->keterangan}}</td>
+                          <td>{{$item->jumlah}}</td>
+                        </tr>         
+                      @endforeach
                       </table>
                 </div>
             </div>

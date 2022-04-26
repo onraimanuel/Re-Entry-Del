@@ -75,11 +75,9 @@
                                           </td>
                                           <td>
                                               <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Ya">
-                                            </label>
                                           </td>
                                           <td>
                                               <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Tidak">
-                                            </label>
                                           </td>
                                         </tr>
                                         @endforeach

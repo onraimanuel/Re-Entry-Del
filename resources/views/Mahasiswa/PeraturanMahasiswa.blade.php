@@ -20,10 +20,12 @@
         <div class="card-body">
             <h5 class="card-title">Peraturan Mahasiswa Selama Karantina</h5>
             <ul>
-                <li> 
-                  
-                  <a href="{{url('assets')}}/DokumenPeraturan/Protokol_Re-entry.pdf" target=" _blank">Protokol Re-entry</a></li>
-              </ul>  
+              @foreach ($peraturan as $item)
+              <li>
+                <a href="{{url('assets')}}/DokumenPeraturan/{{$item->file_peraturan}}" target=" _blank">{{$item->nama_peraturan}}</a>
+              </li>
+              @endforeach
+            </ul>  
         </div>
     </div>
 </main>

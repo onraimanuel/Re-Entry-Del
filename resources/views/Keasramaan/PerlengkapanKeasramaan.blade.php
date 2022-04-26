@@ -33,7 +33,8 @@
           </ul>
           <div class="tab-content pt-2" id="borderedTabJustifiedContent">
             <div class="tab-pane fade show active" id="bordered-justified-home" role="tabpanel" aria-labelledby="Aspa">
-                <button class="btn btn-success"><i class="bi bi-plus-square"></i> Tambah</button>
+
+                <button class="btn btn-success" onclick="window.location.href='/TambahPerlengkapanKeasramaan'" type="button"><i class="bi bi-plus-square"></i> Tambah</button>
                 <br>
                 <br>
                 <div class="table-responsive">
@@ -45,57 +46,55 @@
                                 <th>Gambar</th>
                                 <th>Keterangan</th>
                                 <th>Jumlah</th>
-                                <th>Aksi</th>
+                                <th>Aksi</th><?php $nomor = 1;?>
                             </tr>
                         </thead>
-                            <tr>
-                                <td>1</td>
-                                <td>Disetujui
-                                  asdasd
-                                  asdasdas
-                                  asdasd asydgasygadisgasdiugadsiugdasuiasd
-                                </td>
-                                <td>PDT</td>
-                                <td>Praktikum TA</td>
-                                <td>ok</td>
-                                <td class="text-center">
-                                    <button class="btn btn-primary"> <i class="bi bi-pencil-square"> </i> Edit</button>
-                                    <button class="btn btn-danger"><i class="bi bi-trash"> </i> Hapus</button>
-                                </td>
-                            </tr>         
-                            </tbody>
+                        @foreach ($PerlengkapanAspa as $item)
+                        <tr>
+                            <td><?php echo $nomor++;?></td>
+                            <td>{{$item->nama_perlengkapan}}</td>
+                            <td><center><img src="{{url('assets')}}/Perlengkapan/{{$item->gambar}}" alt="" style="width: 200px"></center></td>
+                            <td  style="width: 300px">{{$item->keterangan}}</td>
+                            <td>{{$item->jumlah}}</td>
+                            <td class="text-center">
+                                <button class="btn btn-primary" onclick="window.location.href='/Perlengkapan/edit/{{$item->perlengkapan_id}}'"> <i class="bi bi-pencil-square"></i> Edit</button>
+                                <button class="btn btn-danger" onclick="window.location.href='/Perlengkapan/delete/{{$item->perlengkapan_id}}'"><i class="bi bi-trash"> </i> Hapus</button>
+                            </td>
+                        </tr> 
+                        @endforeach
                       </table>
                 </div>
             </div>
             <div class="tab-pane fade" id="bordered-justified-profile" role="tabpanel" aria-labelledby="Aspi">
-                <button class="btn btn-success"><i class="bi bi-plus-square"></i> Tambah</button>
+                <button class="btn btn-success" onclick="window.location.href='/TambahPerlengkapanKeasramaan'" type="button"><i class="bi bi-plus-square"></i> Tambah</button>
                 <br>
                 <br>
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
-                        <thead>
-                            <tr class="text-center">
-                                <th>No</th>
-                                <th style="width: 300px">Nama Perlengkapan</th>
-                                <th>Gambar</th>
-                                <th>Keterangan</th>
-                                <th>Jumlah</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                            <tr>
-                                <td>1</td>
-                                <td>Disetujui</td>
-                                <td>PDT</td>
-                                <td>Praktikum TA</td>
-                                <td>ok</td>
-                                <td class="text-center">
-                                    <button class="btn btn-primary"> <i class="bi bi-pencil-square"> </i> Edit</button>
-                                    <button class="btn btn-danger"><i class="bi bi-trash"> </i> Hapus</button>
-                                </td>
-                            </tr>         
-                            </tbody>
-                      </table>
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+                    <thead>
+                        <tr class="text-center">
+                            <th>No</th>
+                            <th style="width: 300px">Nama Perlengkapan</th>
+                            <th>Gambar</th>
+                            <th>Keterangan</th>
+                            <th>Jumlah</th>
+                            <th>Aksi</th>
+                        </tr><?php $nomor = 1;?>
+                    </thead>
+                    @foreach ($PerlengkapanAspi as $item)
+                      <tr>
+                          <td><?php echo $nomor++; ?></td>
+                          <td>{{$item->nama_perlengkapan}}</td>
+                          <td><center><img src="{{url('assets')}}/Perlengkapan/{{$item->gambar}}" alt="" style="width: 200px"></center></td>
+                          <td  style="width: 300px">{{$item->keterangan}}</td>
+                          <td>{{$item->jumlah}}</td>
+                          <td class="text-center">
+                              <button class="btn btn-primary" onclick="window.location.href='/Perlengkapan/edit/{{$item->perlengkapan_id}}'"> <i class="bi bi-pencil-square"> </i> Edit</button>
+                              <button class="btn btn-danger" onclick="window.location.href='/Perlengkapan/delete/{{$item->perlengkapan_id}}'"><i class="bi bi-trash"> </i> Hapus</button>
+                          </td>
+                      </tr>
+                    @endforeach
+                  </table>
                 </div>
             </div>
           </div><!-- End Bordered Tabs Justified -->

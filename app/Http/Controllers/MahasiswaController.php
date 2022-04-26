@@ -24,7 +24,9 @@ class MahasiswaController extends Controller
     }
 
     public function Perlengkapan(){
-        return view('Mahasiswa/PerlengkapanMahasiswa');
+        $PerlengkapanAspa = DB::table('Perlengkapan')->where('filter','=','aspa')->get();
+        $PerlengkapanAspi = DB::table('Perlengkapan')->where('filter','=','aspi')->get();
+        return view('Mahasiswa/PerlengkapanMahasiswa',['PerlengkapanAspa' => $PerlengkapanAspa],['PerlengkapanAspi' => $PerlengkapanAspi]);
     }
 
     public function Ruang(){
@@ -32,12 +34,13 @@ class MahasiswaController extends Controller
     }
 
     public function Layanan(){
-        $pertanyaan  = DB::table('pertanyaan') -> get();
+        $pertanyaan  = DB::table('pertanyaan')->get();
         return view('Mahasiswa/LayananMahasiswa',['pertanyaan'=>$pertanyaan]);
     }
 
     public function Peraturan(){
-        return view('Mahasiswa/PeraturanMahasiswa');
+        $peraturan = DB::table('peraturan')->orderBy('created_at','DESC')->get();
+        return view('Mahasiswa/PeraturanMahasiswa',['peraturan'=>$peraturan]);
     }
 
     public function Login(){

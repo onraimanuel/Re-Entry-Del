@@ -20,7 +20,7 @@
         <div class="card-body">
             <h5 class="card-title">Peraturan Mahasiswa Selama Karantina</h5>
                 <div class="card-body ">
-                    <button class="btn btn-success"><i class="bi bi-plus-square"></i> Tambah</button>
+                    <button class="btn btn-success" onclick="window.location.href='/TambahPeraturanKeasramaan'"><i class="bi bi-plus-square"></i> Tambah</button>
                     <br><br>
                     <div class="table-responsive">
                             <table class="table table-bordered text-center" id="dataTable" cellspacing="0" >
@@ -30,19 +30,19 @@
                                         <th style="width: 600px">File Peraturan</th>
                                         <th>Nama Peraturan</th>
                                         <th>Aksi</th>
-                                    </tr>
+                                    </tr><?php $nomor = 1;?>
                                 </thead>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>PDT</td>
-                                        <td>OK</td>
-                                        <td>
-                                            <button class="btn btn-primary"> <i class="bi bi-pencil-square"> </i> Edit</button>
-                                            <button class="btn btn-danger"><i class="bi bi-trash"> </i> Hapus</button>
-                                        </td>
-                                    </tr>    
-
-                                    </tbody>
+                                @foreach ($Peraturan as $peraturan)
+                                <tr>
+                                    <td><?php echo $nomor++; ?></td>
+                                    <td><a href="{{url('assets')}}/DokumenPeraturan/{{$peraturan->file_peraturan}}">{{$peraturan->file_peraturan}}</a></td>
+                                    <td>{{$peraturan->nama_peraturan}}</td>
+                                    <td>
+                                        <button class="btn btn-primary" type="button" onclick="window.location.href='/Peraturan/edit/{{$peraturan->peraturan_id}}'"> <i class="bi bi-pencil-square"> </i> Edit</button>
+                                        <button class="btn btn-danger" type="button" onclick="window.location.href='/Peraturan/delete/{{$peraturan->peraturan_id}}'"> <i class="bi bi-trash"> </i> Hapus</button>
+                                    </td>
+                                </tr>  
+                                @endforeach   
                               </table>
                     </div>
                 </div>

@@ -30,11 +30,27 @@ Route::get('/RuangKamarMahasiswa',[MahasiswaController::class, 'Ruang']);
 Route::get('/LayananMahasiswa',[MahasiswaController::class, 'Layanan']);
 Route::get('/PeraturanMahasiswa',[MahasiswaController::class, 'Peraturan']);
 
+
 Route::get('/IndexKeasramaan',[Keasramaan::class, 'IndexKeasramaan']);
 Route::get('/DataKeasramaan',[Keasramaan::class, 'DataKeasramaan']);
+
 Route::get('/PerlengkapanKeasramaan',[Keasramaan::class, 'PerlengkapanKeasramaan']);
+Route::get('/TambahPerlengkapanKeasramaan',[Keasramaan::class, 'TambahPerlengkapanKeasramaan']);
+Route::post('/TambahDataPerlengkapan',[Keasramaan::class,'TambahDataPerlengkapan'])->name('Tambah.Perlengkapan');
+Route::get('/Perlengkapan/edit/{perlengkapan_id}',[Keasramaan::class,'EditPerlengkapan']);
+Route::post('/Perlengkapan/update/{perlengkapan_id}',[Keasramaan::class,'UpdatePerlengkapan'])->name('Update.Perlengkapan');
+Route::get('/Perlengkapan/delete/{perlengkapan_id}',[Keasramaan::class,'PerlengkapanDelete'])->name('Delete.Perlengkapan');
+
 Route::get('/PeraturanKeasramaan',[Keasramaan::class, 'PeraturanKeasramaan']);
+Route::get('/TambahPeraturanKeasramaan',[Keasramaan::class, 'TambahPeraturanKeasramaan']);
+Route::post('/TambahDataPeraturan',[Keasramaan::class, 'TambahDataPeraturan'])->name('Tambah.Peraturan');
+Route::get('/Peraturan/edit/{peraturan_id}',[Keasramaan::class,'EditPeraturan']);
+Route::post('/Peraturan/update/{peraturan_id}',[Keasramaan::class,'UpdatePeraturan'])->name('Update.Peraturan');
+Route::get('/Peraturan/delete/{peraturan_id}',[Keasramaan::class,'PeraturanDelete'])->name('Delete.Peraturan');
+
+
 Route::get('/RuangKamarKeasramaan',[Keasramaan::class, 'RuangKamarKeasramaan']);
+
 
 
 Route::get('/IndexHrd',[HrdController::class, 'IndexHrd']);
