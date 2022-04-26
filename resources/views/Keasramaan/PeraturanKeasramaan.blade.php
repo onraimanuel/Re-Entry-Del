@@ -28,12 +28,14 @@
                                     <tr>
                                         <th>No</th>
                                         <th style="width: 600px">File Peraturan</th>
+                                        <th>Nama Peraturan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                     <tr>
                                         <td>1</td>
                                         <td>PDT</td>
+                                        <td>OK</td>
                                         <td>
                                             <button class="btn btn-primary"> <i class="bi bi-pencil-square"> </i> Edit</button>
                                             <button class="btn btn-danger"><i class="bi bi-trash"> </i> Hapus</button>

@@ -55,7 +55,7 @@
                           </div>
                           <div class="col-12">
                             <div class="form-floating">
-                              <input type="text" class="form-control" id="tanggal" placeholder="Tanggal" name="tanggal">
+                              <input type="date" class="form-control" id="tanggal" placeholder="Tanggal" name="tanggal">
                               <label for="tanggal">Tanggal</label>
                             </div>
                           </div>
@@ -85,18 +85,24 @@
                               </tr>
                             </thead>
                             <tbody>
+                              @foreach ($pertanyaan as $pertanyaan)
                               <tr>
-                                <th>1</th>
-                                <td>Brandon Jacob</td>
                                 <td>
-                                    <input type="checkbox" name="Ya">
+                                  {{$pertanyaan->pertanyaan_id}}
+                                </td>
+                                <td>
+                                  {{$pertanyaan->pertanyaan}}
+                                </td>
+                                <td>
+                                    <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Ya">
                                   </label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="Tidak">
+                                    <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Tidak">
                                   </label>
                                 </td>
                               </tr>
+                              @endforeach
                             </tbody>
                           </table>
                           <div class="row">

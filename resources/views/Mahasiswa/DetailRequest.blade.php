@@ -1,6 +1,6 @@
 @extends('Header.HeaderMahasiswa')
 
-@section('title', 'Data Diri - Mahasiswa')
+@section('title', 'Detail Request - Mahasiswa')
 
 @section('container')
     

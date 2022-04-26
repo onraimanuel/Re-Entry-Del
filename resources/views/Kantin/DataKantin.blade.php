@@ -1,6 +1,6 @@
-@extends('Header.HeaderKeasramaan')
+@extends('Header.HeaderKantin')
 
-@section('title','Data Diri - Keasramaan')
+@section('title','Data Diri - Kantin')
 
 @section('container')
 <!-- MAIN -->
@@ -11,8 +11,8 @@
       <h1>Data Diri</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{url('/IndexKeasramaan')}}">Beranda</a></li>
-          <li class="breadcrumb-item active">Data Diri Keasramaan</li>
+          <li class="breadcrumb-item"><a href="{{url('/IndexKantin')}}">Beranda</a></li>
+          <li class="breadcrumb-item active">Data Diri Kantin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -26,7 +26,7 @@
 
               <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
               <h2>Pdt. Timur Hutagalung</h2>
-              <h3>Keasramaan</h3>
+              <h3>Kantin</h3>
             </div>
           </div>
 

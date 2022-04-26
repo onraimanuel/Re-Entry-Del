@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\pertanyaan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
@@ -31,7 +32,8 @@ class MahasiswaController extends Controller
     }
 
     public function Layanan(){
-        return view('Mahasiswa/LayananMahasiswa');
+        $pertanyaan  = DB::table('pertanyaan') -> get();
+        return view('Mahasiswa/LayananMahasiswa',['pertanyaan'=>$pertanyaan]);
     }
 
     public function Peraturan(){

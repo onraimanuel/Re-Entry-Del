@@ -1,6 +1,6 @@
-@extends('Header.HeaderKeasramaan')
+@extends('Header.HeaderHrd')
 
-@section('title','Dashboard - Keasramaan')
+@section('title','Dashboard - HRD')
 
 @section('container')
     
@@ -10,7 +10,7 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{url('/IndexKeasramaan')}}">Beranda</a></li>
+          <li class="breadcrumb-item"><a href="{{url('/IndexHrd')}}">Beranda</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>

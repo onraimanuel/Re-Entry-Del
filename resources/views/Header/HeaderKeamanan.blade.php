@@ -36,7 +36,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="{{url('/IndexKeasramaan')}}" class="logo d-flex align-items-center">
+      <a href="{{url('/IndexKeamanan')}}" class="logo d-flex align-items-center">
         <img src="{{asset('assets')}}/img/logo.png">
         <span class="d-none d-lg-block">RE-DEL</span>
       </a>
@@ -188,16 +188,16 @@
               <a href="#">Show all messages</a>
             </li>
 
-          </ul><!-- End Messages Dropdown Items -->
+          </ul>
 
-        </li><!-- End Messages Nav -->
+        </li>
 
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+          </a>
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -209,7 +209,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="{{url('/DataKeasramaan')}}">
+              <a class="dropdown-item d-flex align-items-center" href="{{url('/DataKeamanan')}}">
                 <i class="bi bi-person"></i>
                 <span>Data Diri</span>
               </a>
@@ -228,8 +228,8 @@
               </a>
             </li>
 
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
+          </ul>
+        </li>
 
       </ul>
     </nav>
@@ -241,44 +241,23 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-        <a class="nav-link" href="{{url('/IndexKeasramaan')}}">
+        <a class="nav-link" href="{{url('/IndexKeamanan')}}">
           <span>Menu</span>
         </a>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/IndexKeasramaan')}}">
+        <a class="nav-link collapsed" href="{{url('/IndexKeamanan')}}">
           <i class="bi bi-grid"> </i>
           <span>Beranda</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/DataKeasramaan')}}">
+        <a class="nav-link collapsed" href="{{url('/DataKeamanan')}}">
           <i class="bi bi-person"></i>
           <span>Data Diri</span>
         </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/PerlengkapanKeasramaan')}}">
-          <i class="bi bi-envelope"></i>
-          <span>Perlengkapan</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/PeraturanKeasramaan')}}">
-          <i class="bi bi-card-list"></i>
-          <span>Peraturan</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/RuangKamarKeasramaan')}}">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Ruang kamar</span>
-        </a>
-      </li><!-- End Login Page Nav -->
+      </li>
     </ul>
 
   </aside><!-- End Sidebar-->
