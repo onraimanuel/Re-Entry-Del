@@ -20,7 +20,10 @@
         <div class="card-body">
             <h5 class="card-title">Tempat Karantina</h5>
             <h6>Tempat Karantina Anda : </h6>
-            <p>RUSSUN</p>
+            @foreach ($ruangkamar as $item)
+                <p>Nama Asrama : <b>{{$item->nama_asrama}}</b></p>
+                <p>Nomor Kamar Anda : <b>{{$item->nomor_kamar}}</b></p>
+            @endforeach
         </div>
     </div>
 </main>

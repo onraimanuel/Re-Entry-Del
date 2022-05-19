@@ -28,7 +28,8 @@
                 </div>
                     <div class="card-body">
                         <br>
-                        <form class="row g-3">
+                        <form class="row g-3" action="{{route('Kirim.Layanan')}}" method="POST" enctype="multipart/form-data">	
+                          {{ csrf_field() }}
                           <div class="col-md-12">
                             <div class="form-floating">
                               <input type="text" class="form-control" id="nama" placeholder="Your Name" name="nama">
@@ -37,19 +38,19 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-floating">
-                              <input type="text" class="form-control" id="Nik" placeholder="NIK" name="Nik">
+                              <input type="text" class="form-control" id="Nik" placeholder="NIK" name="nik">
                               <label for="Nik">NIK</label>
                             </div>
                           </div>
                           <div class="col-md-4 ">
                             <div class="form-floating">
-                              <input type="text" class="form-control" id="angkatan" placeholder="Angkatan" name="Angkatan">
+                              <input type="text" class="form-control" id="angkatan" placeholder="Angkatan" name="angkatan">
                               <label for="Angkatan">Angkatan</label>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-floating">
-                              <input type="text" class="form-control" id="prodi" placeholder="Prodi" name="Prodi">
+                              <input type="text" class="form-control" id="prodi" placeholder="Prodi" name="prodi">
                               <label for="Prodi">Prodi</label>
                             </div>
                           </div>
@@ -62,7 +63,7 @@
                         <div class="col-md-12">
                             <div class="col-md-12">
                               <div class="form-floating">
-                                <input type="number" class="form-control" id="notel" placeholder="Nomor Telepon / HP/ WA" name="notel">
+                                <input type="number" class="form-control" id="notel" placeholder="Nomor Telepon / HP/ WA" name="nohp">
                                 <label for="notel">Nomor Telepon / HP/ WA</label>
                               </div>
                             </div>
@@ -84,25 +85,110 @@
                                 <th style="width: 100px">TIDAK</th>
                               </tr>
                             </thead>
+
                             <tbody>
-                              @foreach ($pertanyaan as $pertanyaan)
                               <tr>
                                 <td>
-                                  {{$pertanyaan->pertanyaan_id}}
+                                  1
                                 </td>
                                 <td>
-                                  {{$pertanyaan->pertanyaan}}
+                                  Apakah pernah keluar rumah/tempat umum (pasar, fasyankes, kerumunan orang, dll) ?
                                 </td>
                                 <td>
-                                    <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Ya">
+                                    <input type="radio" name="value1" id="" value="Ya">
                                   </label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="{{$pertanyaan->pertanyaan_id}}" id="" value="Tidak">
+                                    <input type="radio" name="value1" id="" value="Tidak">
                                   </label>
                                 </td>
                               </tr>
-                              @endforeach
+
+                              <tr>
+                                <td>
+                                  2
+                                </td>
+                                <td>
+                                  Apakah pernah melakukan perjalanan transportasi umum ?
+                                </td>
+                                <td>
+                                    <input type="radio" name="value2" id="" value="Ya">
+                                  </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="value2" id="" value="Tidak">
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  3
+                                </td>
+                                <td>
+                                  Apakah pernah melakukan perjalanan luar daerah/kota/internasional, atau ke wilayah yang terjangkit / zona merah ?
+                                </td>
+                                <td>
+                                    <input type="radio" name="value3" id="" value="Ya">
+                                  </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="value3" id="" value="Tidak">
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  4
+                                </td>
+                                <td>
+                                  Apakah anda mengikuti kegiatan yang melibatkan orang banyak ?
+                                </td>
+                                <td>
+                                    <input type="radio" name="value4" id="" value="Ya">
+                                  </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="value4" id="" value="Tidak">
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  5
+                                </td>
+                                <td>
+                                  Apakah anda memiliki riwayat kontak erat dengan orang yang dinyatakan Kasus Suspek, Kasus Probable, Kasus Konfirmasi, Kontak Erat dan / atau Discarded (berjabat tangan, berbicara, berada dalam satu ruangan/ satu rumah) ?
+                                </td>
+                                <td>
+                                    <input type="radio" name="value5" id="" value="Ya">
+                                  </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="value5" id="" value="Tidak">
+                                  </label>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  6
+                                </td>
+                                <td>
+                                  Apakah anda pernah mengalami demam/batuk/pilek/sakit tenggorokan/sesak dalam 14 hari terakhir ?
+                                </td>
+                                <td>
+                                    <input type="radio" name="value6" id="" value="Ya">
+                                  </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="value6" id="" value="Tidak">
+                                  </label>
+                                </td>
+                              </tr>
+
                             </tbody>
                           </table>
                           <div class="row">
@@ -125,19 +211,19 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <input class="form-control" type="file" id="formFile">
+                          <input class="form-control" type="file" id="formFile" name="fileswab">
                           <p style="font-size:10px; color:red">* File Upload Hasil SWAB</p>
                         </div>
                         <div class="col-md-12">
-                          <input class="form-control" type="file" id="formFile">
+                          <input class="form-control" type="file" id="formFile" name="filepersetujuan">
                           <p style="font-size:10px; color:red">* File Upload Surat Persetujuan Orang Tua. <br>* Klik <a href="{{asset('assets/Dokumen/Form_Persetujuan_OrangTua.pdf')}}">disini</a> untuk mengunduh.</p>
                         </div>
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </div>
                         </form>
-                      </div>
-                </div>
+                    </div>
+          </div>
           </div>
           </div>
       </div>

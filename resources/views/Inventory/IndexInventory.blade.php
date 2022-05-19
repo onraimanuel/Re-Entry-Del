@@ -34,16 +34,26 @@
                                 <th scope="col">Tanggal Karantina</th>
                                 <th scope="col">Tanggal Selesai Karantina</th>
                                 <th scope="col">Tempat Karantina</th>
-                                </tr>
+                                </tr><?php $nomor=1;?>
                             </thead>
                             <tbody>
+                                @foreach ($ruangkamar as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Brandon Jacob</td>
-                                    <td>20 - April - 2022</td>
-                                    <td>25 - April - 2022</td>
-                                    <td>Rusun 3</td>
+                                    <th scope="row"><a href="#">{{$nomor++}}</a></th>
+                                    <td>{{$item->user->name}}</td>
+                                    <td><?php
+                                        $tanggal = $item->users->tanggal;
+                                        $tanggal = date('d M Y');
+                                        echo $tanggal;
+                                    ?></td>
+                                    <td><?php
+                                        $tgl1 = $item->users->tanggal;
+                                        $tgl2 = date('d M Y', strtotime('+3 days', strtotime($tgl1)));
+                                        echo $tgl2;
+                                    ?></td>
+                                    <td>{{$item->nama_asrama}}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         

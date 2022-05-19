@@ -28,21 +28,25 @@
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nama</th>
+                        <th scope="col">Asrama</th>
                         <th scope="col">Kamar</th>
                         <th scope="col">Aksi</th>
-                        </tr>
+                        </tr><?php $nomor = 1?>
                     </thead>
                     <tbody>
+                        @foreach ($ruangkamar as $item)
                         <tr>
-                            <th scope="row"><a href="#">#1</a></th>
-                            <td>Brandon Jacob</td>
-                            <td><a href="#" class="text-primary">At praesentium minu</a></td>
+                            <th scope="row"><a href="#">{{$nomor++}}</a></th>
+                            <td>{{$item->user->name}}</td>
+                            <td>{{$item->nama_asrama}}</td>
+                            <td>{{$item->nomor_kamar}}</td>
                             <td>
-                                <button class="btn btn-primary"> <i class="bi bi-pencil-square"> </i> Edit</button>
-                                <button class="btn btn-danger"><i class="bi bi-trash"> </i> Hapus</button>
+                                <button class="btn btn-primary" onclick="window.location.href='/RuangKamar/edit/{{$item->ruangkamar_id}}'"><i class="bi bi-pencil-square"> </i> Edit</button>
+                                <button class="btn btn-danger" onclick="window.location.href='/RuangKamar/delete/{{$item->ruangkamar_id}}'"><i class="bi bi-trash"> </i> Hapus</button>
                             </td>
                             
                         </tr>
+                        @endforeach
                     </tbody>
                     </table>
 

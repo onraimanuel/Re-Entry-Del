@@ -15,9 +15,15 @@ class CreateRuangkamarTable extends Migration
     {
         Schema::create('ruangkamar', function (Blueprint $table) {
             $table->increments('ruangkamar_id');
+            $table->unsignedBigInteger('re_entry_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('nama_asrama',200);
             $table->string('nomor_kamar',200);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('re_entry_id')->references('id')->on('re_entry');
+            
         });
     }
 

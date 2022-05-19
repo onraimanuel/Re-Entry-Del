@@ -32,16 +32,18 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Aksi</th>
-                                </tr>
+                                </tr><?php $nomor=1 ?>
                             </thead>
                             <tbody>
+                                @foreach ($layanan as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Brandon Jacob</td>
+                                    <th scope="row">{{$nomor++}}</th>
+                                    <td>{{$item->nama}}</td>
                                     <td>
-                                        <button type="button" class="btn btn-success" onclick="window.location.href='{{url('/DetailKlinik')}}'"><i class="bi bi-wrench"></i> Detail</button>
+                                        <button type="button" class="btn btn-success" onclick="window.location.href='/DetailKlinik/{{$item->layanan_id}}'"><i class="bi bi-wrench"></i> Detail</button>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         

@@ -36,18 +36,25 @@
                                 <th scope="col">Angkatan</th>
                                 <th scope="col">Asal</th>
                                 <th scope="col">Tanggal Re-Entry</th>
-                                </tr>
+                                </tr><?php $nomor = 1?>
                             </thead>
                             <tbody>
+                                @foreach ($re_entry as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Onra</td>
-                                    <td>11420035</td>
-                                    <td>D4TRPL</td>
-                                    <td>2020</td>
-                                    <td>Balige</td>
-                                    <td>04 April 2022</td>
+                                    <th scope="row"><a href="">{{$nomor++}}</a></th>
+                                    <td>{{$item->nama}}</td>
+                                    <td>{{$item->nim}}</td>
+                                    <td>{{$item->prodi}}</td>
+                                    <td>{{$item->angkatan}}</td>
+                                    <td>{{$item->asal}}</td>
+                                    <td>                                    
+                                    <?php
+                                        $date=date_create($item->tanggal);
+                                        echo date_format($date,"d M Y");
+									?>
+                                    </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         

@@ -33,17 +33,31 @@
                                 <th scope="col">Nama Gedung</th>
                                 <th scope="col">Tanggal Karantina</th>
                                 <th scope="col">Tanggal Selesai Karantina</th>
-                                <th scope="col">Jumlah Mahasiswa</th>
-                                </tr>
+                                <th scope="col">Nama Mahasiswa</th>
+                                </tr><?php $nomor = 1?>
                             </thead>
                             <tbody>
+                                @foreach ($ruangkamar as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Rusun 3</td>
-                                    <td>20 - April - 2022</td>
-                                    <td>25 - April - 2022</td>
-                                    <td>20</td>
+                                    <th scope="row"><a href="#">{{$nomor++}}</a></th>
+                                    <td>{{$item->nama_asrama}}</td>
+                                    <td>
+                                        <?php
+                                            $tanggal = $item->users->tanggal;
+                                            $tanggal = date('d M Y');
+                                            echo $tanggal;
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            $tgl1 = $item->users->tanggal;// pendefinisian tanggal awal
+                                            $tgl2 = date('d M Y', strtotime('+3 days', strtotime($tgl1))); //operasi penjumlahan tanggal sebanyak 6 hari
+                                            echo $tgl2;
+                                        ?>
+                                    </td>
+                                    <td>{{$item->user->name}}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         

@@ -30,7 +30,6 @@
                         <br>
                         <form action="{{route('Update.Perlengkapan',$EditPerlengkapan)}}" method="post" id="contact-form" enctype="multipart/form-data">	
                         {{ csrf_field() }}
-
                             <div class="row mb-3">
                                 <label for="nama_perlengkapan" class="col-sm-2 col-form-label">Nama Perlengkapan</label>
                                 <div class="col-sm-10">
@@ -63,13 +62,13 @@
                                 <label for="filter" class="col-sm-2 col-form-label" name="filter">Filter</label>
                                 <div class="col-sm-10">
                                     <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="filter" id="gridRadios1" value="aspa" <?php echo ($EditPerlengkapan->filter == "aspa") ? 'checked="checked"' : ''; ?>>
+                                      <input class="form-check-input" type="radio" name="filter" id="gridRadios1" value="aspa" {{($EditPerlengkapan->filter == "aspa") ? 'checked="checked"' : '';}}>
                                       <label class="form-check-label" for="gridRadios1">
                                         Aspa
                                       </label>
                                     </div>
                                     <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="filter" id="gridRadios2" value="aspi" <?php echo ($EditPerlengkapan->filter == "aspi") ? 'checked="checked"' : ''; ?>>
+                                      <input class="form-check-input" type="radio" name="filter" id="gridRadios2" value="aspi" {{($EditPerlengkapan->filter == "aspi") ? 'checked="checked"' : '';}}>
                                       <label class="form-check-label" for="gridRadios2">
                                         Aspi
                                       </label>

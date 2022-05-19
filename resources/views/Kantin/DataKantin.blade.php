@@ -23,9 +23,8 @@
 
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
-              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Pdt. Timur Hutagalung</h2>
+              <img src="{{url('assets')}}/FotoProfil/{{Auth::user()->gambar}}" alt="Profile" class="rounded-circle">
+              <h2>{{Auth::user()->name}}</h2>
               <h3>Kantin</h3>
             </div>
           </div>
@@ -55,53 +54,57 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Nama Lengkap</div>
-                    <div class="col-lg-9 col-md-8">Pdt. Timur Hutagalung</div>
+                    <div class="col-lg-9 col-md-8">{{Auth::user()->name}}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Username</div>
-                    <div class="col-lg-9 col-md-8">TimurHutagalung</div>
+                    <div class="col-lg-9 col-md-8">{{Auth::user()->username}}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email Akademik</div>
-                    <div class="col-lg-9 col-md-8">TimurHutagalung@gmail.com</div>
+                    <div class="col-lg-9 col-md-8">{{Auth::user()->email}}</div>
                   </div>
                 </div>
 
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <form action="{{route('Edit.DataKlinik',Auth::user()->id)}}" method="post" id="contact-form" enctype="multipart/form-data">	
+                    {{ csrf_field() }}
+                    {{ method_field('PATCH') }}
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Foto Profil</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
+                        <img src="{{url('assets')}}/FotoProfil/{{Auth::user()->gambar}}" alt="Profile">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama Lengkap</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Pdt. Timur Hutagalung">
+                        <input name="name" type="text" class="form-control" id="fullName" value="{{Auth::user()->name}}">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Username</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="TimurHutagalung">
+                        <input name="username" type="text" class="form-control" id="company" value="{{Auth::user()->username}}">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Email Akademik</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="TimurHutagalung@gmail.com">
+                        <input name="email" type="text" class="form-control" id="Job" value="{{Auth::user()->email}}">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">File Foto</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="gambar" type="file" class="form-control" id="Job" value="">{{Auth::user()->gambar}}
                       </div>
                     </div>
                     <div class="text-center">
@@ -119,6 +122,7 @@
         </div>
       </div>
     </section>
+
 
 </main><!-- End #main -->
 

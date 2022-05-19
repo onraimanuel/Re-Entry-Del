@@ -33,17 +33,19 @@
                                 <th scope="col">Nama</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Aksi</th>
-                                </tr>
+                                </tr><?php $nomor= 1?>
                             </thead>
                             <tbody>
+                                @foreach ($DataRedel as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Brandon Jacob</td>
-                                    <td><span class="badge bg-success">Approved</span></td>
+                                    <th scope="row"><a href="">{{$nomor++}}</a></th>
+                                    <td>{{$item->nama}}</td>
+                                    <td><span class="badge {{($item->status == "Menunggu") ? 'bg-warning' : 'bg-success';}}" >{{$item->status}}</span></td>
                                     <td>
-                                        <button type="button" class="btn btn-success"><i class="bi bi-wrench"></i> Detail</button>
+                                        <button type="button" class="btn btn-success" onclick="window.location.href='/DetailRequestHrd/{{$item->id}}'"><i class="bi bi-wrench"></i> Detail</button>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         

@@ -11,15 +11,23 @@ class CreateLayananTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
-        Schema::create('layanan', function (Blueprint $table) {
+        Schema::create('layanan', function(Blueprint $table) {
             $table->increments('layanan_id');
-            $table->string('nik',16);
-            $table->string('angkatan',4);
-            $table->string('prodi',20);
+            $table->string('nama');
+            $table->string('nik');
+            $table->string('angkatan');
+            $table->string('prodi');
             $table->date('tanggal');
-            $table->string('nohp',12);
+            $table->string('nohp');
+            $table->string('value1');
+            $table->string('value2');
+            $table->string('value3');
+            $table->string('value4');
+            $table->string('value5');
+            $table->string('value6');
             $table->string('fileswab');
             $table->string('filepersetujuan');
             $table->timestamps();

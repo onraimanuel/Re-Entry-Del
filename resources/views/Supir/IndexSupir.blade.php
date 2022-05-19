@@ -32,14 +32,16 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Tempat Karantina</th>
-                                </tr>
+                                </tr><?php $nomor=1?>
                             </thead>
                             <tbody>
+                                @foreach ($ruangkamar as $item)
                                 <tr>
-                                    <th scope="row"><a href="#">1</a></th>
-                                    <td>Brandon Jacob</td>
-                                    <td>Rusun 3</td>
+                                    <th scope="row"><a href="#">{{$nomor++}}</a></th>
+                                    <td>{{$item->user->name}}</td>
+                                    <td>{{$item->nama_asrama}}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                             </table>
         
