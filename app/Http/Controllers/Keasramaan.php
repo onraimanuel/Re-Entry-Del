@@ -76,8 +76,8 @@ class Keasramaan extends Controller
     }
 
     public function PerlengkapanKeasramaan(){
-        $PerlengkapanAspa = DB::table('Perlengkapan')->where('filter','=','aspa')->get();
-        $PerlengkapanAspi = DB::table('Perlengkapan')->where('filter','=','aspi')->get();
+        $PerlengkapanAspa = DB::table('perlengkapan')->where('filter','=','aspa')->get();
+        $PerlengkapanAspi = DB::table('perlengkapan')->where('filter','=','aspi')->get();
         return view('Keasramaan/PerlengkapanKeasramaan',['PerlengkapanAspa' => $PerlengkapanAspa],['PerlengkapanAspi' => $PerlengkapanAspi]);
     }
 
