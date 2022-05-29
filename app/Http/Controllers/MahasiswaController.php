@@ -66,8 +66,8 @@ class MahasiswaController extends Controller
     }
 
     public function Perlengkapan(){
-        $PerlengkapanAspa = DB::table('Perlengkapan')->where('filter','=','aspa')->get();
-        $PerlengkapanAspi = DB::table('Perlengkapan')->where('filter','=','aspi')->get();
+        $PerlengkapanAspa = DB::table('perlengkapan')->where('filter','=','aspa')->get();
+        $PerlengkapanAspi = DB::table('perlengkapan')->where('filter','=','aspi')->get();
         return view('Mahasiswa/PerlengkapanMahasiswa',['PerlengkapanAspa' => $PerlengkapanAspa],['PerlengkapanAspi' => $PerlengkapanAspi]);
     }
 
