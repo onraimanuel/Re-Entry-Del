@@ -128,7 +128,7 @@ class Keasramaan extends Controller
     }
 
     public function PeraturanKeasramaan(){
-        $Peraturan = DB::table('Peraturan')->orderBy('created_at','DESC')->get();
+        $Peraturan = DB::table('peraturan')->orderBy('created_at','DESC')->get();
         return view('Keasramaan/PeraturanKeasramaan',['Peraturan' => $Peraturan]);
     }
 
