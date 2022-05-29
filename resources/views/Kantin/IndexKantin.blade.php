@@ -50,8 +50,8 @@
                                     </td>
                                     <td>
                                         <?php
-                                            $tgl1 = $item->users->tanggal;// pendefinisian tanggal awal
-                                            $tgl2 = date('d M Y', strtotime('+3 days', strtotime($tgl1))); //operasi penjumlahan tanggal sebanyak 6 hari
+                                            $tgl1 = $item->users->tanggal;
+                                            $tgl2 = date('d M Y', strtotime('+3 days', strtotime($tgl1)));
                                             echo $tgl2;
                                         ?>
                                     </td>

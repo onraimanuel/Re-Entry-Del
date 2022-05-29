@@ -31,7 +31,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/RequestMahasiswa',[MahasiswaController::class, 'RequestMahasiswa']);
     Route::post('/KirimRequest',[MahasiswaController::class,'KirimRequest'])->name('Kirim.Request');
     Route::get('/DetailRequestMahasiswa/{re_entry_id}',[MahasiswaController::class, 'DetailRequestMahasiswa']);
-
     Route::get('/PerlengkapanMahasiswa',[MahasiswaController::class, 'Perlengkapan']);
     Route::get('/RuangKamarMahasiswa',[MahasiswaController::class, 'Ruang']);
     Route::get('/LayananMahasiswa',[MahasiswaController::class, 'Layanan']);
@@ -41,10 +40,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/IndexKeasramaan',[Keasramaan::class, 'IndexKeasramaan'])->name("Keasramaan");
     Route::get('/DetailRequestKeasramaan/{re_entry_id}',[Keasramaan::class, 'DetailRequestKeasramaan'])->name("DetailRequestKeasramaan");
     Route::post('/DetailRequestKeasramaan/Request/{re_entry_id}',[Keasramaan::class,'UpdateDetail'])->name('Update.RequestAsrama');
-    
     Route::get('/DataKeasramaan',[Keasramaan::class, 'DataKeasramaan']);
     Route::patch('/DataKeasramaan/{id}',[Keasramaan::class, 'EditDiriKeasraman'])->name("Edit.DataKeasramaan");
-
     Route::get('/PerlengkapanKeasramaan',[Keasramaan::class, 'PerlengkapanKeasramaan']);
     Route::get('/TambahPerlengkapanKeasramaan',[Keasramaan::class, 'TambahPerlengkapanKeasramaan']);
     Route::post('/TambahDataPerlengkapan',[Keasramaan::class,'TambahDataPerlengkapan'])->name('Tambah.Perlengkapan');

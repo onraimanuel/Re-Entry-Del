@@ -5,6 +5,7 @@ use App\Models\peraturan;
 use App\Models\perlengkapan;
 use App\Models\re_entry;
 use App\Models\ruangkamar;
+use App\Models\layanan;
 use App\Models\users;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;

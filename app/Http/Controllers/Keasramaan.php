@@ -25,7 +25,11 @@ class Keasramaan extends Controller
 
     public function IndexKeasramaan(){
         $DataRedel = DB::table('re_entry')->get();
-        return view('Keasramaan/IndexKeasramaan',['DataRedel' => $DataRedel]);
+        $DataBulan = [];
+        foreach ($DataRedel as $bulan) {
+            $DataBulan[] = $bulan->angkatan;
+        }
+        return view('Keasramaan/IndexKeasramaan',['DataRedel' => $DataRedel, 'DataBulan'=>$DataBulan]);
     }
 
     public function DetailRequestKeasramaan($re_entry_id){

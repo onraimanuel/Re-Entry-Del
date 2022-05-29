@@ -58,7 +58,6 @@ class MahasiswaController extends Controller
         $KirimRequest->tanggal = $request -> tanggal;
         $KirimRequest->save();
         return redirect('/IndexMahasiswa');
-
     }
 
     public function DetailRequestMahasiswa($re_entry_id){
