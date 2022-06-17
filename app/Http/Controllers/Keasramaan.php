@@ -25,12 +25,18 @@ class Keasramaan extends Controller
 
     public function IndexKeasramaan(){
         $DataRedel = DB::table('re_entry')->get();
-        $DataBulan = [];
-        foreach ($DataRedel as $bulan) {
-            $DataBulan[] = $bulan->angkatan;
-        }
-        return view('Keasramaan/IndexKeasramaan',['DataRedel' => $DataRedel, 'DataBulan'=>$DataBulan]);
+        
+        $data2018 =  re_entry::select(
+            DB::raw('count(id) as total'),
+        )->where('status','=',"disetujui")
+        ->where('angkatan','=','2018')
+        ->groupBy(DB::raw("DATE_FORMAT(tanggal,'%M')"))
+        ->pluck('total');
+
+        return view('Keasramaan/IndexKeasramaan',['DataRedel' => $DataRedel, 'data2018' =>$data2018]);
     }
+
+
 
     public function DetailRequestKeasramaan($re_entry_id){
         $DetailReentry = re_entry::where('id',$re_entry_id)->first();
