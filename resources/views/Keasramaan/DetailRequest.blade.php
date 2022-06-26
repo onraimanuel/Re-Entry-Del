@@ -91,7 +91,7 @@
                         <div class="col-md-12">
                           <div class="col-md-12">
                             <div class="form-floating">
-                              <input type="text" class="form-control" id="asal" placeholder="Ruang Kamar" name="nama_asrama">
+                              <input type="text" class="form-control" id="asal" placeholder="Ruang Kamar" name="nama_asrama" required>
                               <label for="Asal">Nama Asrama</label>
                             </div>
                           </div>
@@ -99,7 +99,7 @@
                       <div class="col-md-12">
                         <div class="col-md-12">
                           <div class="form-floating">
-                            <input type="text" class="form-control" id="asal" placeholder="Nomor Kamar" name="nomor_kamar">
+                            <input type="text" class="form-control" id="asal" placeholder="Nomor Kamar" name="nomor_kamar" required>
                             <label for="Asal">Nomor Kamar</label>
                           </div>
                         </div>
