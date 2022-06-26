@@ -1,4 +1,4 @@
-@extends('Header.HeaderHRD')
+@extends('Header.HeaderHrd')
 
 @section('title','Detail Request - HRD')
 
