@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Users;
-use App\Models\Layanan;
+use App\Models\layanan;
 use App\Models\re_entry;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -81,7 +81,7 @@ class MahasiswaController extends Controller
     }
 
     public function KirimFormLayanan(Request $request){
-        $KirimLayanan = new Layanan();
+        $KirimLayanan = new layanan();
         $KirimLayanan->nama = $request->nama;
         $KirimLayanan->nik = $request->nik;
         $KirimLayanan->angkatan = $request -> angkatan;
