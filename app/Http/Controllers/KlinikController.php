@@ -48,7 +48,7 @@ class KlinikController extends Controller
     }
 
     public function DetailKlinik($layanan_id){
-        $DetailKlinik = Layanan::find($layanan_id);
+        $DetailKlinik = layanan::find($layanan_id);
         // $pertanyaan  = DB::table('pertanyaan') -> get();
         return view('Klinik/DetailKlinik', compact('DetailKlinik'));
     }
