@@ -36,7 +36,7 @@ class HrdController extends Controller
 
     public function DetailRequestHRD($re_entry_id){
         $DetailReentry = re_entry::where('id',$re_entry_id)->first();
-        return view('Hrd/DetailRequest',compact('DetailReentry'));
+        return view('HRD/DetailRequest',compact('DetailReentry'));
     }
 
     public function EditDiriHrd(Request $request,$id){
